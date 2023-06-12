@@ -16,3 +16,30 @@
 
 - npm install react-router-dom
 - http://reactrouter.com/en/main/route/
+
+## react-router-dom
+
+- npm install react-router-dom
+- https://reactrouter.com/en/main/route/route
+
+## react-icons
+
+- npm install react-icons
+
+## react-slick
+
+- https://react-slick.neostack.com/
+- npm install react-slick
+- npm install slick-carousel
+- import "slick-carousel/slick/slick.css";
+- import "slick-carousel/slick/slick-theme.css";
+
+## react-helmet
+
+- https://www.npmjs.com/package/react-helmet
+- npm i react-helmet
+
+## react-query
+
+- https://tanstack.com/query/v3/docs/react/overview
+- npm i react-query
