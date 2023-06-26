@@ -13,8 +13,11 @@ export async function eventsList() {
   ).then((res) => res.json());
 }
 
-export async function charactersList() {
+export async function charactersList(props) {
+  const customLimit = props.queryKey[1].numLimit;
+  const page = props.queryKey[1].page;
+  const offset = (page - 1) * customLimit;
   return await fetch(
-    `${BASE_PATH}/v1/public/characters?orderBy=name&limit=20&apikey=${API_KEY}`
+    `${BASE_PATH}/v1/public/characters?orderBy=name&limit=${customLimit}&offset=${offset}&apikey=${API_KEY}`
   ).then((res) => res.json());
 }
