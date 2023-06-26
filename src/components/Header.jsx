@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [scroll, setScroll] = useState(true);
@@ -39,6 +39,10 @@ export default function Header() {
     { title: "comics", href: "/comics" },
     { title: "events", href: "/events" },
   ];
+
+  const location = useLocation();
+  console.log(location.pathname);
+
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -68,7 +72,12 @@ export default function Header() {
           <HStack spacing={"4"} textTransform={"uppercase"}>
             {GNB.map((item) => (
               <Link to={item.href} key={item.title} aria-label={item.title}>
-                <Text>{item.title}</Text>
+                <Text
+                  color={item.href === location.pathname ? "red.500" : "white"}
+                  fontWeight={"bold"}
+                >
+                  {item.title}
+                </Text>
               </Link>
             ))}
           </HStack>

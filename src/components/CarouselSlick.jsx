@@ -47,6 +47,7 @@ export default function CarouselSlick() {
                 fontSize={"80px"}
                 fontWeight={800}
                 textAlign={"center"}
+                color={"white"}
               >
                 {item.title}
               </Text>
